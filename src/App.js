@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import TodoForm from './components/TodoForm';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // const [todos, setTodos] = useState([
+    //     { id: 0, number: 1, description: 'Wake up' },
+    //     { id: 1, number: 2, description: 'Find my keys' },
+    //     { id: 2, number: 3, description: 'Drive the car' },
+    //     { id: 3, number: 4, description: 'Are you winning son?' },
+    //     { id: 4, number: 5, description: "No dad It's shame" },
+    // ]);
+
+    // const [description, setDescription] = useState('');
+
+    // const addNewTodo = (e) => {
+    //     e.preventDefault();
+    //     console.log(description);
+    // };
+
+    return (
+        <div className="App">
+            {/* //        <form>
+    //             <input
+    //                 value={description}
+    //                 onChange={(e) => setDescription(e.target.value)}
+    //                 type="text"
+    //                 placeholder="todo..."
+    //             />
+    //             <button onClick={addNewTodo}>New Todo</button>
+    //         </form> */}
+            <TodoForm />
+        </div>
+    );
 }
 
 export default App;
